@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --paper: #fdfbf7;
+  --ink: #2d2a26;
+  --accent: #cca43b;
+
+  /* Fonts */
+  --font-serif: Merriweather, serif;
+  --font-sans: Inter, sans-serif;
+}
+
+.text-serif {
+  font-family: var(--font-serif);
+}
+
+.text-sans {
+  font-family: var(--font-sans);
+}
