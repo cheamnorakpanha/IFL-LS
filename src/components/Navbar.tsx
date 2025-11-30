@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.location.hash = '#/'}>
             <BookOpen className="h-8 w-8 text-[var(--accent)]" />
-            <span className="font-serif text-xl font-bold text-ink">Literature Studies</span>
+            <span className="font-serif text-xl font-bold text-[var(--ink)]">Literature Studies</span>
           </div>
 
           {/* Desktop Menu */}

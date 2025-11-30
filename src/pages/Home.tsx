@@ -79,7 +79,7 @@ const Home: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-ink mb-4">
+        <h1 className="text-4xl md:text-5xl font-serif font-bold text-[var(--ink)] mb-4">
           Literary Summaries
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
@@ -91,7 +91,7 @@ const Home: React.FC = () => {
 
       {/* Search & Generation Section */}
       <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-200 mb-12">
-        <h2 className="text-lg font-semibold mb-4 flex items-center gap-2 text-ink">
+        <h2 className="text-lg font-semibold mb-4 flex items-center gap-2 text-[var(--ink)]">
           <BookPlus className="w-5 h-5 text-[var(--accent)]" />
           Expand the Library
         </h2>
@@ -108,7 +108,7 @@ const Home: React.FC = () => {
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               placeholder="Enter a book title (e.g., 'The Great Gatsby')"
-              className="block w-full pl-10 pr-10 py-3 border border-stone-300 rounded-md leading-5 bg-stone-50 placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition duration-150 ease-in-out"
+              className="selection:bg-[var(--accent)] block w-full pl-10 pr-10 py-3 border border-stone-300 rounded-md leading-5 bg-stone-50 placeholder-gray-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[var(--accent)] focus:border-transparent transition duration-150 ease-in-out"
             />
             {searchInput && (
               <button
@@ -145,7 +145,7 @@ const Home: React.FC = () => {
       {/* Results Header */}
       {searchQuery && (
         <div className="mb-6 flex items-center justify-between">
-          <h3 className="text-lg font-serif text-ink">
+          <h3 className="text-lg font-serif text-[var(--ink)]">
             Search results for "
             <span className="font-semibold">{searchQuery}</span>"
           </h3>

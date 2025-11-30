@@ -21,7 +21,7 @@ const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
           <Feather className="w-6 h-6" />
         </div>
         <div className="flex-1">
-          <h3 className="text-xl font-serif font-bold text-ink mb-1 group-hover:text-[var(--accent)] transition-colors">
+          <h3 className="text-xl font-serif font-bold text-[var(--ink)] mb-1 group-hover:text-[var(--accent)] transition-colors">
             {story.title}
           </h3>
           <p className="text-sm font-medium text-gray-500 uppercase tracking-wide mb-4 flex items-center gap-2">
@@ -38,7 +38,7 @@ const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
         <Link
           to={`/story/${story.id}`}
           state={{ story }}
-          className="group/btn inline-flex items-center gap-2 px-4 py-2 bg-stone-900 text-white text-sm font-medium rounded-md hover:bg-[var(--accent)] transition-colors duration-300"
+          className="group/btn inline-flex items-center gap-2 px-4 py-2 bg-[var(--ink)] text-white text-sm font-medium rounded-md hover:bg-[var(--accent)] transition-colors duration-300"
         >
           Read Story
           <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
