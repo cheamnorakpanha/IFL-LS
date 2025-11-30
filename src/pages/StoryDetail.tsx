@@ -27,7 +27,7 @@ const StoryDetail: React.FC = () => {
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-stone-100 mb-4">
             <BookOpen className="w-8 h-8 text-stone-400" />
         </div>
-        <h2 className="text-2xl font-serif font-bold text-ink mb-2">Story not found</h2>
+        <h2 className="text-2xl font-serif font-bold text-[var(--ink)] mb-2">Story not found</h2>
         <p className="text-gray-500 mb-8">The story you are looking for does not exist or has been removed.</p>
         <Link 
           to="/" 
@@ -108,7 +108,7 @@ const StoryDetail: React.FC = () => {
             <div className="relative">
                 <button 
                   onClick={handleNativeShare}
-                  className={`p-2 transition-colors rounded-full ${isShareMenuOpen ? 'bg-stone-100 text-ink' : 'text-gray-400 hover:text-ink hover:bg-stone-50'}`}
+                  className={`p-2 transition-colors rounded-full ${isShareMenuOpen ? 'bg-stone-100 text-[var(--ink)]' : 'text-gray-400 hover:text-ink hover:bg-stone-50'}`}
                   title="Share"
                 >
                     <Share2 className="w-5 h-5" />
@@ -162,7 +162,7 @@ const StoryDetail: React.FC = () => {
             <div className="inline-block px-3 py-1 bg-stone-100 text-stone-600 text-xs font-bold tracking-widest uppercase rounded-full mb-6">
                 Literature Summary
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-ink mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[var(--ink)] mb-6 leading-tight">
                 {story.title}
             </h1>
             <div className="flex items-center justify-center gap-6 text-gray-500 font-medium">
@@ -185,7 +185,7 @@ const StoryDetail: React.FC = () => {
         </div>
 
         {/* Content Body */}
-        <div className="prose prose-stone prose-lg md:prose-xl mx-auto font-serif text-ink/90 leading-loose selection:bg-[var(--accent)]/20">
+        <div className="prose prose-stone prose-lg md:prose-xl mx-auto font-serif text-[var(--ink)]/90 leading-loose selection:bg-[var(--accent)]/20">
             {paragraphs.map((paragraph, index) => (
               <p 
                 key={index} 
@@ -202,7 +202,7 @@ const StoryDetail: React.FC = () => {
             {/* Context / Themes Box - Shows description if reading full content */}
             {hasContent && (
                 <div className="mt-12 p-8 bg-orange-50 rounded-lg border border-orange-100 text-base not-prose">
-                    <h3 className="font-bold text-ink mb-3 flex items-center gap-2 text-lg">
+                    <h3 className="font-bold text-[var(--ink)] mb-3 flex items-center gap-2 text-lg">
                         <Tag className="w-5 h-5 text-[var(--accent)]" />
                         About this Story
                     </h3>
@@ -225,7 +225,7 @@ const StoryDetail: React.FC = () => {
 
       {/* Copied Alert Toast */}
       {showToast && (
-        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-ink text-white px-5 py-3 rounded-lg shadow-xl flex items-center gap-3 z-50 animate-in fade-in slide-in-from-bottom-4 duration-300">
+        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-[var(--ink)] text-white px-5 py-3 rounded-lg shadow-xl flex items-center gap-3 z-50 animate-in fade-in slide-in-from-bottom-4 duration-300">
           <div className="bg-green-500 rounded-full p-0.5">
             <Check className="w-3 h-3 text-white" />
           </div>

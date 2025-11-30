@@ -20,3 +20,12 @@ export const LoadingState = {
 } as const;
 
 export type LoadingState = (typeof LoadingState)[keyof typeof LoadingState];
+
+export const ContactSection = {
+  FULLNAME: 'John Doe',
+  EMAIL: 'john.doe.1821@rupp.edu',
+  MESSAGE: 'How has this website helped you?',
+  CONTACT: 'cheam.panha@gmail.com',
+} as const;
+
+export type ContactSection = (typeof ContactSection)[keyof typeof ContactSection];

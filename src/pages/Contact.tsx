@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Send } from "lucide-react";
+import { ContactSection } from "../types/types";
 
 const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -11,7 +12,7 @@ const Contact: React.FC = () => {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-3xl md:text-4xl font-serif font-bold text-ink mb-4">
+        <h1 className="text-3xl md:text-4xl font-serif font-bold text-[var(--ink)] mb-4">
           Contact Us
         </h1>
         <div className="h-1 w-20 bg-[var(--accent)] mx-auto rounded-full"></div>
@@ -33,7 +34,7 @@ const Contact: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3 text-sm text-stone-300">
               <Mail className="w-4 h-4 text-[var(--accent)]" />
-              <span>contact@literaturestudies.ifl</span>
+              <span>{ContactSection.CONTACT}</span>
             </div>
           </div>
         </div>
@@ -55,8 +56,8 @@ const Contact: React.FC = () => {
                 type="text"
                 id="name"
                 required
-                className="block w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm bg-stone-50 focus:ring-[var(--accent)] focus:border-[var(--accent)] sm:text-sm"
-                placeholder="John Doe"
+                className="selection:bg-[var(--accent)] block w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm bg-stone-50 focus:ring-[var(--accent)] focus:border-[var(--accent)] sm:text-sm"
+                placeholder={ContactSection.FULLNAME}
               />
             </div>
 
@@ -71,8 +72,8 @@ const Contact: React.FC = () => {
                 type="email"
                 id="email"
                 required
-                className="block w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm bg-stone-50 focus:ring-[var(--accent)] focus:border-[var(--accent)] sm:text-sm"
-                placeholder="john@student.ifl.edu"
+                className="selection:bg-[var(--accent)] block w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm bg-stone-50 focus:ring-[var(--accent)] focus:border-[var(--accent)] sm:text-sm"
+                placeholder={ContactSection.EMAIL}
               />
             </div>
 
@@ -87,8 +88,8 @@ const Contact: React.FC = () => {
                 id="message"
                 rows={4}
                 required
-                className="block w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm bg-stone-50 focus:ring-[var(--accent)] focus:border-[var(--accent)] sm:text-sm resize-none"
-                placeholder="How has this website helped you?"
+                className="selection:bg-[var(--accent)] block w-full px-3 py-2 border border-stone-300 rounded-md shadow-sm bg-stone-50 focus:ring-[var(--accent)] focus:border-[var(--accent)] sm:text-sm resize-none"
+                placeholder={ContactSection.MESSAGE}
               />
             </div>
 

@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           wants to read." — Mark Twain
         </p>
         <p>
-          &copy; {new Date().getFullYear()} Literature Studies. IFL DOE Project.
+          &copy; 2022–{new Date().getFullYear()} Literature Studies. IFL DOE Project.
         </p>
       </div>
     </footer>
